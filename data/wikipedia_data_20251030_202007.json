@@ -1,0 +1,586 @@
+{
+  "metadata": {
+    "url": "https://www.wikipedia.org/",
+    "scraped_at": "2025-10-30T20:20:10.222180",
+    "keywords": []
+  },
+  "statistics": {
+    "total_headlines": 12,
+    "total_links": 374,
+    "headlines_by_type": {
+      "Заголовок H1": 1,
+      "Заголовок H3": 1,
+      "Языковая ссылка": 10
+    },
+    "links_by_length": {
+      "short_text": 342,
+      "medium_text": 30,
+      "long_text": 2
+    },
+    "timestamp": "2025-10-30T20:20:10.221596"
+  },
+  "headlines": [
+    {
+      "text": "Wikipedia\nСвободная энциклопедия",
+      "type": "Заголовок H1",
+      "selector": "h1"
+    },
+    {
+      "text": "The internet we were promised",
+      "type": "Заголовок H3",
+      "selector": "h3"
+    },
+    {
+      "text": "Русский\n2 065 000+ статей",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "English\n7,069,000+ articles",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "日本語\n1,475,000+ 記事",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "Deutsch\n3.056.000+ Artikel",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "Français\n2 712 000+ articles",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "Español\n2.065.000+ artículos",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "中文\n1,503,000+ 条目 / 條目",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "Italiano\n1.938.000+ voci",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "Polski\n1 670 000+ haseł",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    },
+    {
+      "text": "Português\n1.156.000+ artigos",
+      "type": "Языковая ссылка",
+      "selector": ".central-featured-lang"
+    }
+  ],
+  "links": [
+    {
+      "text": "Русский\n2 065 000+ статей",
+      "url": "https://www.wikipedia.org//ru.wikipedia.org/",
+      "text_length": 25
+    },
+    {
+      "text": "English\n7,069,000+ articles",
+      "url": "https://www.wikipedia.org//en.wikipedia.org/",
+      "text_length": 27
+    },
+    {
+      "text": "日本語\n1,475,000+ 記事",
+      "url": "https://www.wikipedia.org//ja.wikipedia.org/",
+      "text_length": 17
+    },
+    {
+      "text": "Deutsch\n3.056.000+ Artikel",
+      "url": "https://www.wikipedia.org//de.wikipedia.org/",
+      "text_length": 26
+    },
+    {
+      "text": "Français\n2 712 000+ articles",
+      "url": "https://www.wikipedia.org//fr.wikipedia.org/",
+      "text_length": 28
+    },
+    {
+      "text": "Español\n2.065.000+ artículos",
+      "url": "https://www.wikipedia.org//es.wikipedia.org/",
+      "text_length": 28
+    },
+    {
+      "text": "中文\n1,503,000+ 条目 / 條目",
+      "url": "https://www.wikipedia.org//zh.wikipedia.org/",
+      "text_length": 21
+    },
+    {
+      "text": "Italiano\n1.938.000+ voci",
+      "url": "https://www.wikipedia.org//it.wikipedia.org/",
+      "text_length": 24
+    },
+    {
+      "text": "Polski\n1 670 000+ haseł",
+      "url": "https://www.wikipedia.org//pl.wikipedia.org/",
+      "text_length": 23
+    },
+    {
+      "text": "Português\n1.156.000+ artigos",
+      "url": "https://www.wikipedia.org//pt.wikipedia.org/",
+      "text_length": 28
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ar.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//de.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//en.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//es.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//fa.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//fr.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//it.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//arz.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//nl.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ja.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//pl.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//pt.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ceb.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//sv.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//uk.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//vi.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//war.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//zh.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ru.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//af.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//sq.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ast.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//az.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//bg.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//zh-min-nan.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//bn.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//be.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ca.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//cs.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//cy.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//da.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//et.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//el.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//eo.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//eu.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//gl.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ko.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//hy.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//hi.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//hr.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//id.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//he.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ka.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//lld.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//la.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//lv.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//lt.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//hu.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//mk.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//mg.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//mr.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ms.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//min.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//my.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//no.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//nn.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ce.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//uz.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//kk.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ro.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//simple.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//sk.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//sl.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//sr.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//sh.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//fi.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//sw.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ta.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//tt.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//te.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//th.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//tg.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//azb.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//tr.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ur.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//zh-yue.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ace.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//als.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//am.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//an.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//hyw.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//gor.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ban.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//bjn.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//map-bms.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//ba.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//be-tarask.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//bcl.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//bpy.wikipedia.org/",
+      "text_length": 0
+    },
+    {
+      "text": "Без текста",
+      "url": "https://www.wikipedia.org//bar.wikipedia.org/",
+      "text_length": 0
+    }
+  ]
+}
