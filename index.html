@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WanderMate - Планирование путешествий</title>
     <style>
+        /* СТИЛИ ГЛАВНОЙ СТРАНИЦЫ */
         * {
             margin: 0;
             padding: 0;
@@ -130,7 +131,7 @@
             line-height: 1.6;
         }
 
-        .payment-section {
+        .premium-section {
             background: white;
             margin: 50px auto;
             max-width: 500px;
@@ -153,7 +154,7 @@
             margin-bottom: 20px;
         }
 
-        .buy-button {
+        .subscribe-button {
             background: linear-gradient(135deg, #4CAF50, #45a049);
             color: white;
             border: none;
@@ -166,7 +167,7 @@
             width: 100%;
         }
 
-        .buy-button:hover {
+        .subscribe-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
         }
@@ -179,115 +180,518 @@
             margin-top: 80px;
         }
 
+        /* СТИЛИ ПЛАТЕЖНОЙ ФОРМЫ */
+        .payment-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .payment-form {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-input.error {
+            border-color: #ff4757;
+        }
+
+        .error-message {
+            color: #ff4757;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .buy-button {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
+        }
+
+        .buy-button:active {
+            transform: translateY(0);
+        }
+
+        .buy-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .test-data {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .test-data h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .test-data ul {
+            list-style: none;
+            color: #666;
+        }
+
+        .test-data li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            z-index: 1000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+
+        .notification.success {
+            background: #4CAF50;
+        }
+
+        .notification.error {
+            background: #ff4757;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .demo-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .demo-modal {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .demo-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .demo-button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .demo-success {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .demo-error {
+            background: #ff4757;
+            color: white;
+        }
+
+        .back-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
         /* Адаптивность */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 36px;
             }
-
+            
             .nav {
                 flex-direction: column;
                 gap: 15px;
             }
-
+            
             .features {
                 grid-template-columns: 1fr;
+            }
+            
+            .payment-container, .premium-section {
+                margin: 20px;
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Шапка сайта -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">🌍 WanderMate</div>
-            <div class="nav-links">
-                <a href="#features">Возможности</a>
-                <a href="#premium">Премиум</a>
-                <a href="#about">О нас</a>
+    <!-- ГЛАВНАЯ СТРАНИЦА -->
+    <div id="mainPage">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">🌍 WanderMate</div>
+                <div class="nav-links">
+                    <a href="#features">Возможности</a>
+                    <a href="#premium">Премиум</a>
+                    <a href="#about">О нас</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Главный баннер -->
+        <section class="hero">
+            <h1>Откройте мир с WanderMate</h1>
+            <p>Планируйте путешествия легко и удобно. Находите лучшие маршруты, бронируйте отели и делитесь впечатлениями.</p>
+            <a href="#premium" class="cta-button">Начать путешествие</a>
+        </section>
+
+        <!-- Возможности -->
+        <section id="features" class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🗺️</div>
+                <h3>Планирование маршрутов</h3>
+                <p>Создавайте идеальные маршруты с учетом ваших предпочтений и бюджета</p>
             </div>
-        </nav>
-    </header>
+            <div class="feature-card">
+                <div class="feature-icon">🏨</div>
+                <h3>Бронирование отелей</h3>
+                <p>Находите и бронируйте лучшие отели по всему миру</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Сообщество путешественников</h3>
+                <p>Делитесь опытом и находите попутчиков для ваших приключений</p>
+            </div>
+        </section>
 
-    <!-- Главный баннер -->
-    <section class="hero">
-        <h1>Откройте мир с WanderMate</h1>
-        <p>Планируйте путешествия легко и удобно. Находите лучшие маршруты, бронируйте отели и делитесь впечатлениями.</p>
-        <a href="#premium" class="cta-button">Начать путешествие</a>
-    </section>
+        <!-- Премиум подписка -->
+        <section id="premium" class="premium-section">
+            <h2 class="product-title">Премиум подписка</h2>
+            <div class="product-price">990 ₽/месяц</div>
+            <p>Получите доступ ко всем премиум функциям:</p>
+            <ul style="text-align: left; margin: 20px 0; color: #666; list-style: none; padding-left: 20px;">
+                <li>✅ Эксклюзивные маршруты</li>
+                <li>✅ Приоритетная поддержка</li>
+                <li>✅ Персональный планировщик</li>
+                <li>✅ Скидки на отели</li>
+            </ul>
+            <button class="subscribe-button" onclick="showPaymentForm()">Оформить подписку</button>
+        </section>
 
-    <!-- Возможности -->
-    <section id="features" class="features">
-        <div class="feature-card">
-            <div class="feature-icon">🗺️</div>
-            <h3>Планирование маршрутов</h3>
-            <p>Создавайте идеальные маршруты с учетом ваших предпочтений и бюджета</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🏨</div>
-            <h3>Бронирование отелей</h3>
-            <p>Находите и бронируйте лучшие отели по всему миру</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3>Сообщество путешественников</h3>
-            <p>Делитесь опытом и находите попутчиков для ваших приключений</p>
-        </div>
-    </section>
-
-    <!-- Премиум подписка -->
-    <section id="premium" class="payment-section">
-        <h2 class="product-title">Премиум подписка</h2>
-        <div class="product-price">990 ₽/месяц</div>
-        <p>Получите доступ ко всем премиум функциям:</p>
-        <ul style="text-align: left; margin: 20px 0; color: #666;">
-            <li>Эксклюзивные маршруты</li>
-            <li>Приоритетная поддержка</li>
-            <li>Персональный планировщик</li>
-            <li>Скидки на отели</li>
-        </ul>
-        <button class="buy-button" onclick="showPaymentForm()">Оформить подписку</button>
-    </section>
-
-    <!-- Платежная форма (изначально скрыта) -->
-    <div id="paymentForm" style="display: none;">
-        <!-- ВСТАВЬТЕ СЮДА ВЕСЬ КОД ПЛАТЕЖНОЙ ФОРМЫ ИЗ ПРЕДЫДУЩЕГО index.html -->
-        <!-- Начиная от <style> для платежной формы и до конца <script> -->
+        <!-- Подвал -->
+        <footer class="footer" id="about">
+            <p>© 2024 WanderMate. Все права защищены.</p>
+            <p>Сделано с ❤️ для путешественников</p>
+        </footer>
     </div>
 
-    <!-- Подвал -->
-    <footer class="footer" id="about">
-        <p>© 2024 WanderMate. Все права защищены.</p>
-        <p>Сделано с ❤️ для путешественников</p>
-    </footer>
+    <!-- ПЛАТЕЖНАЯ ФОРМА (изначально скрыта) -->
+    <div id="paymentPage" style="display: none;">
+        <div class="payment-container">
+            <button class="back-button" onclick="showMainPage()">← Назад к сайту</button>
+            
+            <div class="product-info">
+                <h1 class="product-title">Премиум подписка</h1>
+                <div class="product-price">990 ₽</div>
+                <p class="product-description">
+                    Получите доступ ко всем премиум функциям на 1 месяц. 
+                    Отмена в любой момент.
+                </p>
+            </div>
+
+            <form id="paymentForm" class="payment-form">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email для отправки чека</label>
+                    <input type="email" id="email" class="form-input" 
+                           placeholder="your@email.com" required>
+                    <div class="error-message" id="emailError">Введите корректный email адрес</div>
+                </div>
+
+                <button type="submit" class="buy-button" id="buyButton">
+                    <span id="buttonText">Купить сейчас</span>
+                    <div class="spinner" id="buttonSpinner"></div>
+                </button>
+            </form>
+
+            <div class="test-data">
+                <h3>💳 Тестовые данные для оплаты:</h3>
+                <ul>
+                    <li><strong>Карта:</strong> 5555 5555 5555 4477</li>
+                    <li><strong>Срок:</strong> 01/30</li>
+                    <li><strong>CVV:</strong> 123</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Демо-платежное окно -->
+        <div class="demo-overlay" id="demoOverlay">
+            <div class="demo-modal">
+                <h2>💳 Демо-режим оплаты</h2>
+                <p>Тестовая карта: <strong>5555 5555 5555 4477</strong></p>
+                <p>Срок: 01/30 | CVV: 123</p>
+                <p>Выберите сценарий для тестирования:</p>
+                <div class="demo-buttons">
+                    <button class="demo-button demo-success" id="demoSuccess">Успешная оплата</button>
+                    <button class="demo-button demo-error" id="demoError">Ошибка оплаты</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="notification" class="notification"></div>
+    </div>
 
     <script>
+        // ФУНКЦИИ ДЛЯ ПЕРЕКЛЮЧЕНИЯ МЕЖДУ СТРАНИЦАМИ
         function showPaymentForm() {
-            // Скрываем основную страницу
-            document.querySelector('.header').style.display = 'none';
-            document.querySelector('.hero').style.display = 'none';
-            document.querySelector('.features').style.display = 'none';
-            document.querySelector('.payment-section').style.display = 'none';
-            document.querySelector('.footer').style.display = 'none';
-
-            // Показываем платежную форму
-            document.getElementById('paymentForm').style.display = 'block';
-
-            // Прокручиваем к форме
+            document.getElementById('mainPage').style.display = 'none';
+            document.getElementById('paymentPage').style.display = 'block';
             window.scrollTo(0, 0);
         }
 
         function showMainPage() {
-            // Показываем основную страницу
-            document.querySelector('.header').style.display = 'block';
-            document.querySelector('.hero').style.display = 'block';
-            document.querySelector('.features').style.display = 'block';
-            document.querySelector('.payment-section').style.display = 'block';
-            document.querySelector('.footer').style.display = 'block';
-
-            // Скрываем платежную форму
-            document.getElementById('paymentForm').style.display = 'none';
+            document.getElementById('mainPage').style.display = 'block';
+            document.getElementById('paymentPage').style.display = 'none';
+            window.scrollTo(0, 0);
         }
+
+        // КЛАСС ПЛАТЕЖНОЙ СИСТЕМЫ
+        class PaymentSystem {
+            constructor() {
+                this.form = document.getElementById('paymentForm');
+                this.buyButton = document.getElementById('buyButton');
+                this.buttonText = document.getElementById('buttonText');
+                this.buttonSpinner = document.getElementById('buttonSpinner');
+                this.notification = document.getElementById('notification');
+                this.demoOverlay = document.getElementById('demoOverlay');
+                this.demoSuccessBtn = document.getElementById('demoSuccess');
+                this.demoErrorBtn = document.getElementById('demoError');
+                
+                this.init();
+            }
+
+            init() {
+                // Восстановление состояния из localStorage
+                this.restoreFormState();
+                
+                // Инициализация обработчиков событий
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                this.demoSuccessBtn.addEventListener('click', () => this.handleDemoSuccess());
+                this.demoErrorBtn.addEventListener('click', () => this.handleDemoError());
+                
+                // Автосохранение формы
+                this.form.addEventListener('input', () => this.saveFormState());
+            }
+
+            validateForm() {
+                const email = document.getElementById('email').value;
+                const emailError = document.getElementById('emailError');
+                let isValid = true;
+
+                // Валидация email
+                if (!this.isValidEmail(email)) {
+                    emailError.style.display = 'block';
+                    document.getElementById('email').classList.add('error');
+                    isValid = false;
+                } else {
+                    emailError.style.display = 'none';
+                    document.getElementById('email').classList.remove('error');
+                }
+
+                return isValid;
+            }
+
+            isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            async handleSubmit(event) {
+                event.preventDefault();
+                
+                if (!this.validateForm()) {
+                    this.showNotification('Пожалуйста, исправьте ошибки в форме', 'error');
+                    return;
+                }
+
+                this.showLoading(true);
+                
+                try {
+                    // Имитация создания платежа
+                    await this.createPayment();
+                    
+                    // Показываем демо-окно вместо реальной платежной формы
+                    setTimeout(() => {
+                        this.showLoading(false);
+                        this.demoOverlay.style.display = 'flex';
+                    }, 1000);
+                    
+                } catch (error) {
+                    console.error('Payment error:', error);
+                    this.showNotification('Ошибка при создании платежа', 'error');
+                    this.showLoading(false);
+                }
+            }
+
+            async createPayment() {
+                // Эмуляция запроса к бэкенду
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve({
+                            id: 'test_payment_' + Date.now(),
+                            status: 'pending'
+                        });
+                    }, 1000);
+                });
+            }
+
+            handleDemoSuccess() {
+                this.demoOverlay.style.display = 'none';
+                this.showNotification('✅ Оплата прошла успешно! Перенаправление...', 'success');
+                
+                setTimeout(() => {
+                    window.location.href = 'success.html';
+                }, 2000);
+            }
+
+            handleDemoError() {
+                this.demoOverlay.style.display = 'none';
+                this.showNotification('❌ Ошибка при оплате. Пожалуйста, попробуйте еще раз.', 'error');
+            }
+
+            showLoading(show) {
+                if (show) {
+                    this.buttonText.style.display = 'none';
+                    this.buttonSpinner.style.display = 'block';
+                    this.buyButton.disabled = true;
+                } else {
+                    this.buttonText.style.display = 'block';
+                    this.buttonSpinner.style.display = 'none';
+                    this.buyButton.disabled = false;
+                }
+            }
+
+            showNotification(message, type) {
+                this.notification.textContent = message;
+                this.notification.className = `notification ${type}`;
+                this.notification.classList.add('show');
+                
+                setTimeout(() => {
+                    this.notification.classList.remove('show');
+                }, 5000);
+            }
+
+            saveFormState() {
+                const formData = {
+                    email: document.getElementById('email').value
+                };
+                localStorage.setItem('paymentFormState', JSON.stringify(formData));
+            }
+
+            restoreFormState() {
+                const saved = localStorage.getItem('paymentFormState');
+                if (saved) {
+                    const formData = JSON.parse(saved);
+                    document.getElementById('email').value = formData.email || '';
+                }
+            }
+
+            clearFormState() {
+                localStorage.removeItem('paymentFormState');
+                this.form.reset();
+            }
+        }
+
+        // Инициализация платежной системы при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            new PaymentSystem();
+        });
     </script>
 </body>
 </html>
